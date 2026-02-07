@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>游戏资讯</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111827;
+      --muted: #9ca3af;
+      --text: #e5e7eb;
+      --accent: #22c55e;
+      --accent-2: #38bdf8;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, #1f2937, transparent),
+                  radial-gradient(1000px 500px at 90% -10%, #0ea5e9, transparent),
+                  var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 48px 20px 24px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+      justify-content: center;
+    }
+    .tab {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(17, 24, 39, 0.6);
+    }
+    .tab.active {
+      color: var(--text);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(17,24,39,0.75));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 170px;
+    }
+    .badge {
+      align-self: flex-start;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .cta {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .cta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .panel {
+      margin-top: 24px;
+      background: rgba(17,24,39,0.6);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .panel h2 { margin: 0; font-size: 18px; }
+    .panel ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .panel li { margin: 6px 0; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px 0 40px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>游戏资讯</h1>
+    <p>聚合热门新游、版本更新与电竞动态</p>
+  </header>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active">全部</div>
+      <div class="tab">新游发布</div>
+      <div class="tab">版本更新</div>
+      <div class="tab">电竞赛事</div>
+      <div class="tab">行业观察</div>
+    </div>
+
+    <section class="grid">
+      <article class="card">
+        <span class="badge">新游发布</span>
+        <h3>“星际远征”开启预下载，首发福利公开</h3>
+        <div class="meta">2026-02-07 · 口碑前瞻</div>
+        <div class="cta"><span>标签：科幻 / 开放世界</span><a href="#">详情 →</a></div>
+      </article>
+      <article class="card">
+        <span class="badge">版本更新</span>
+        <h3>“暗影纪元”2.3版本上线：新职业与团本</h3>
+        <div class="meta">2026-02-07 · 更新日志</div>
+        <div class="cta"><span>标签：MMO / 团队副本</span><a href="#">详情 →</a></div>
+      </article>
+      <article class="card">
+        <span class="badge">电竞赛事</span>
+        <h3>全球大师赛小组赛程公布，中国战队首战时间</h3>
+        <div class="meta">2026-02-06 · 赛事前瞻</div>
+        <div class="cta"><span>标签：MOBA / 赛程</span><a href="#">详情 →</a></div>
+      </article>
+      <article class="card">
+        <span class="badge">行业观察</span>
+        <h3>2026年上半年手游收入报告：增长点与机会</h3>
+        <div class="meta">2026-02-06 · 数据报告</div>
+        <div class="cta"><span>标签：市场 / 数据</span><a href="#">详情 →</a></div>
+      </article>
+      <article class="card">
+        <span class="badge">版本更新</span>
+        <h3>“像素跑团”新赛季开启：新增地图与皮肤</h3>
+        <div class="meta">2026-02-05 · 社区热点</div>
+        <div class="cta"><span>标签：休闲 / 赛季</span><a href="#">详情 →</a></div>
+      </article>
+      <article class="card">
+        <span class="badge">新游发布</span>
+        <h3>独立游戏展精选：5款值得关注的创意作品</h3>
+        <div class="meta">2026-02-05 · 编辑推荐</div>
+        <div class="cta"><span>标签：独立 / 创意</span><a href="#">详情 →</a></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>今日速览</h2>
+      <ul>
+        <li>三款新游进入公测阶段，预约热度持续上升</li>
+        <li>两大电竞赛事开启门票预售与观赛礼包</li>
+        <li>主机平台春季特卖将于下周开启</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 游戏资讯 · 仅作展示示例
+  </footer>
+</body>
+</html>
